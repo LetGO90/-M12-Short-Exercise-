@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Complete a Form</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+	<h1>Please complete our survey</h1>
+	<form action="confirmation.html" method="post">
+		<fieldset>
+			<legend>Contact information</legend>
+
+			<label for="email"><span class="accesskey">E</span>mail address:</label>
+			<input type="email" id="email" name="email" accesskey="e" autofocus required>
+
+			<label for="first_name"><span class="accesskey">F</span>irst name:</label>
+			<input type="text" id="first_name" name="first_name" accesskey="f" required>
+
+			<label for="last_name"><span class="accesskey">L</span>ast name:</label>
+			<input type="text" id="last_name" name="last_name" accesskey="l" required>
+		</fieldset>
+
+		<fieldset>
+			<legend>Geographic information</legend>
+
+			<label for="state"><span class="accesskey">S</span>tate:</label>
+			<input type="text" id="state" name="state" accesskey="s"
+			       pattern="[A-Za-z]{2}" maxlength="2"
+			       title="Enter a two-character state abbreviation (e.g., CA)"
+			       placeholder="Two characters" required>
+
+			<label for="zip"><span class="accesskey">Z</span>ip code:</label>
+			<input type="text" id="zip" name="zip" accesskey="z"
+			       pattern="\d{5}" maxlength="5"
+			       title="Enter a five-digit zip code (e.g., 90210)"
+			       placeholder="Five digits" required>
+		</fieldset>
+
+		<fieldset>
+			<legend>Source</legend>
+
+			<label for="how_heard">How did you hear about us?</label>
+			<select id="how_heard" name="how_heard">
+				<option value="Web Search" selected>Web Search</option>
+				<option value="Friend or Colleague">Friend or Colleague</option>
+				<option value="Social Media">Social Media</option>
+				<option value="Advertisement">Advertisement</option>
+				<option value="Other">Other</option>
+			</select>
+
+			<label for="comments">Additional comments:</label>
+			<textarea id="comments" name="comments" rows="5"
+			          placeholder="Add any additional comments here."></textarea>
+		</fieldset>
+
+		<div class="buttons">
+			<button type="submit" class="btn btn-submit">Submit</button>
+			<button type="reset" class="btn btn-reset">Reset</button>
+		</div>
+	</form>
+</body>
+</html>
